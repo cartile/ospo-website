@@ -2,85 +2,85 @@ export default function Home() {
 return (
   <>
   <main className="gradient leading-relaxed tracking-wide flex flex-col">
-  <nav id="header" className="w-full z-30 top-0 text-white py-1 lg:py-6">
-    <div
-      className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-2 lg:py-6"
-    >
-      <div className="pl-4 flex items-center">
-        <a
-          className="text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
-          href="#"
-        >
-          <svg
-            className="h-6 w-6 inline-block fill-current text-yellow-700"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <path d="M13 8V0L8.11 5.87 3 12h4v8L17 8h-4z" />
-          </svg>
-          Bolt App
-        </a>
-      </div>
-
-      <div className="block lg:hidden pr-4">
-        <button
-          id="nav-toggle"
-          className="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-green-500 appearance-none focus:outline-none"
-        >
-          <svg
-            className="fill-current h-3 w-3"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
-        </button>
-      </div>
-
+    <nav id="header" className="w-full z-30 top-0 text-white py-1 lg:py-6">
       <div
-        className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 text-black p-4 lg:p-0 z-20"
-        id="nav-content"
+        className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-2 lg:py-6"
       >
-        <ul className="list-reset lg:flex justify-end flex-1 items-center">
-          <li className="mr-3">
-            <a
-              className="inline-block py-2 px-4 text-black font-bold no-underline"
-              href="#"
-              >Active</a
+        <div className="pl-4 flex items-center">
+          <a
+            className="text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+            href="#"
+          >
+            <svg
+              className="h-6 w-6 inline-block fill-current text-yellow-700"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
             >
-          </li>
-          <li className="mr-3">
-            <a
-              className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-              href="#"
-              >link</a
+              <path d="M13 8V0L8.11 5.87 3 12h4v8L17 8h-4z" />
+            </svg>
+            ospo
+          </a>
+        </div>
+
+        <div className="block lg:hidden pr-4">
+          <button
+            id="nav-toggle"
+            className="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-green-500 appearance-none focus:outline-none"
+          >
+            <svg
+              className="fill-current h-3 w-3"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
-          </li>
-          <li className="mr-3">
-            <a
-              className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-              href="#"
-              >link</a
-            >
-          </li>
-        </ul>
-        <button
-          id="navAction"
-          className="mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 shadow opacity-75"
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+
+        <div
+          className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 text-black p-4 lg:p-0 z-20"
+          id="nav-content"
         >
-          Action
-        </button>
+          <ul className="list-reset lg:flex justify-end flex-1 items-center">
+            <li className="mr-3">
+              <a
+                className="inline-block py-2 px-4 text-black font-bold no-underline"
+                href="#"
+                >Active</a
+              >
+            </li>
+            <li className="mr-3">
+              <a
+                className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                href="#"
+                >link</a
+              >
+            </li>
+            <li className="mr-3">
+              <a
+                className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                href="#"
+                >link</a
+              >
+            </li>
+          </ul>
+          <button
+            id="navAction"
+            className="mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 shadow opacity-75"
+          >
+            Action
+          </button>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
   <div className="container mx-auto h-screen">
     <div className="text-center px-3 lg:px-0">
       <h1
         className="my-4 text-2xl md:text-3xl lg:text-5xl font-black leading-tight"
       >
-        Main Hero Message to sell yourself!
+        Tired of Tracking Job Applications in Spreadsheets?
       </h1>
       <p
         className="leading-normal text-gray-800 text-base md:text-xl lg:text-2xl mb-8"
@@ -102,86 +102,26 @@ return (
 
     <div className="flex items-center w-full mx-auto content-end">
       <div
-        className="browser-mockup flex flex-1 m-6 md:px-0 md:m-12 bg-white w-1/2 rounded shadow-xl"
-      ></div>
+        className="relative browser-mockup flex flex-1 m-6 md:px-0 md:m-12 bg-white w-1/2 rounded shadow-xl"
+      >
+      <p className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-7 "> My Test Account </p>
+        <div className="flex flex-1 flex-col">
+          <p className="p-5">Your Year/Month/Week in Review </p>
+          <p className="p-5">400 Jobs Applied </p>
+          <p className="p-5">380 Rejections </p>
+          <p className="p-5">20 Interview Requests </p>
+          <p className="p-5">5 Job Offers </p>
+        </div>
+      </div>
     </div>
   </div>
-
-  <section className="bg-white border-b py-12 ">
-    <div
-      className="container mx-auto flex flex-wrap items-center justify-between pb-12"
-    >
-      <h2
-        className="w-full my-2 text-xl font-black leading-tight text-center text-gray-800 lg:mt-8"
-      >
-        Our Customers / Featured in
-      </h2>
-      <div className="w-full mb-4">
-        <div
-          className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
-        ></div>
-      </div>
-
-      <div
-        className="flex flex-1 flex-wrap max-w-4xl mx-auto items-center justify-between text-xl text-gray-500 font-bold opacity-75"
-      >
-        <span className="w-1/2 p-4 md:w-auto flex items-center"
-          ><svg
-            className="h-10 w-10 mr-4 fill-current text-gray-500 opacity-75"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <path
-              d="M7 0H6L0 3v6l4-1v12h12V8l4 1V3l-6-3h-1a3 3 0 0 1-6 0z"
-            /></svg>
-          >TeeShirtz</span
-        >
-
-        <span className="w-1/2 p-4 md:w-auto flex items-center"
-          ><svg
-            className="h-10 w-10 mr-4 fill-current text-gray-500 opacity-75"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <path
-              d="M15.75 8l-3.74-3.75a3.99 3.99 0 0 1 6.82-3.08A4 4 0 0 1 15.75 8zM1.85 15.3l9.2-9.19 2.83 2.83-9.2 9.2-2.82-2.84zm-1.4 2.83l2.11-2.12 1.42 1.42-2.12 2.12-1.42-1.42zM10 15l2-2v7h-2v-5z"
-            /></svg>
-          >Mic.Check</span
-        >
-
-        <span className="w-1/2 p-4 md:w-auto flex items-center"
-          ><svg
-            className="h-10 w-10 mr-4 fill-current text-gray-500 opacity-75"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <path
-              d="M10 12a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-3a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm4 2.75V20l-4-4-4 4v-8.25a6.97 6.97 0 0 0 8 0z"
-            /></svg>
-          >BadgeLife.io</span
-        >
-
-        <span className="w-1/2 p-4 md:w-auto flex items-center"
-          ><svg
-            className="h-10 w-10 mr-4 fill-current text-gray-500 opacity-75"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <path
-              d="M15.3 14.89l2.77 2.77a1 1 0 0 1 0 1.41 1 1 0 0 1-1.41 0l-2.59-2.58A5.99 5.99 0 0 1 11 18V9.04a1 1 0 0 0-2 0V18a5.98 5.98 0 0 1-3.07-1.51l-2.59 2.58a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41l2.77-2.77A5.95 5.95 0 0 1 4.07 13H1a1 1 0 1 1 0-2h3V8.41L.93 5.34a1 1 0 0 1 0-1.41 1 1 0 0 1 1.41 0l2.1 2.1h11.12l2.1-2.1a1 1 0 0 1 1.41 0 1 1 0 0 1 0 1.41L16 8.41V11h3a1 1 0 1 1 0 2h-3.07c-.1.67-.32 1.31-.63 1.89zM15 5H5a5 5 0 1 1 10 0z"
-            /></svg>
-          >Bugz 4 Life</span
-        >
-      </div>
-    </div>
-  </section>
 
   <section className="bg-gray-100 border-b py-8">
     <div className="container max-w-5xl mx-auto m-8">
       <h2
         className="w-full my-2 text-5xl font-black leading-tight text-center text-gray-800"
       >
-        Title
+        How It Works
       </h2>
       <div className="w-full mb-4">
         <div
@@ -192,11 +132,10 @@ return (
       <div className="flex flex-wrap">
         <div className="w-5/6 sm:w-1/2 p-6">
           <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
-            Lorem ipsum dolor sit amet
+            Apply for a job on any platform.
           </h3>
           <p className="text-gray-600 mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            at ipsum eu nunc commodo posuere et sit amet ligula.<br /><br />
+            Log the job using our website or Chrome Extension<br /><br />
 
             Images from:
             <a className="text-orange-500 underline" href="https://undraw.co/"
@@ -640,12 +579,10 @@ return (
         <div className="w-full sm:w-1/2 p-6 mt-6">
           <div className="align-middle">
             <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
-              Lorem ipsum dolor sit amet
+              Monitor Dashboard
             </h3>
             <p className="text-gray-600 mb-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              at ipsum eu nunc commodo posuere et sit amet ligula.<br /><br />
-              Images from:
+              Gain insights into your job-hunting journey. Discover patterns, improve strategies, and boost your chances!
               <a className="text-orange-500 underline" href="https://undraw.co/"
                 >undraw.co</a
               >
@@ -656,223 +593,7 @@ return (
     </div>
   </section>
 
-  <section className="bg-white border-b py-8">
-    <div className="container mx-auto flex flex-wrap pt-4 pb-12">
-      <h2
-        className="w-full my-2 text-5xl font-black leading-tight text-center text-gray-800"
-      >
-        Title
-      </h2>
-      <div className="w-full mb-4">
-        <div
-          className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
-        ></div>
-      </div>
-
-      <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-        <div
-          className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
-        >
-          <a href="#" className="flex flex-wrap no-underline hover:no-underline">
-            <p className="w-full text-gray-600 text-xs md:text-sm px-6 mt-6">
-              GETTING STARTED
-            </p>
-            <div className="w-full font-bold text-xl text-gray-800 px-6">
-              Lorem ipsum dolor sit amet.
-            </div>
-            <p className="text-gray-600 text-base px-6 mb-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              at ipsum eu nunc commodo posuere et sit amet ligula.
-            </p>
-          </a>
-        </div>
-        <div
-          className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
-        >
-          <div className="flex items-center justify-start">
-            <button
-              className="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-extrabold rounded my-6 py-4 px-8 shadow-lg"
-            >
-              Action
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-        <div
-          className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
-        >
-          <a href="#" className="flex flex-wrap no-underline hover:no-underline">
-            <p className="w-full text-gray-600 text-xs md:text-sm px-6 mt-6">
-              GETTING STARTED
-            </p>
-            <div className="w-full font-bold text-xl text-gray-800 px-6">
-              Lorem ipsum dolor sit amet.
-            </div>
-            <p className="text-gray-600 text-base px-6 mb-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              at ipsum eu nunc commodo posuere et sit amet ligula.
-            </p>
-          </a>
-        </div>
-        <div
-          className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
-        >
-          <div className="flex items-center justify-center">
-            <button
-              className="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-extrabold rounded my-6 py-4 px-8 shadow-lg"
-            >
-              Action
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-        <div
-          className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
-        >
-          <a href="#" className="flex flex-wrap no-underline hover:no-underline">
-            <p className="w-full text-gray-600 text-xs md:text-sm px-6 mt-6">
-              GETTING STARTED
-            </p>
-            <div className="w-full font-bold text-xl text-gray-800 px-6">
-              Lorem ipsum dolor sit amet.
-            </div>
-            <p className=" text-gray-600 text-base px-6 mb-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              at ipsum eu nunc commodo posuere et sit amet ligula.
-            </p>
-          </a>
-        </div>
-        <div
-          className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
-        >
-          <div className="flex items-center justify-end">
-            <button
-              className="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-extrabold rounded my-6 py-4 px-8 shadow-lg"
-            >
-              Action
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section className="bg-gray-100 py-8">
-    <div className="container mx-auto px-2 pt-4 pb-12 text-gray-800">
-      <h2
-        className="w-full my-2 text-5xl font-black leading-tight text-center text-gray-800"
-      >
-        Pricing
-      </h2>
-      <div className="w-full mb-4">
-        <div
-          className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
-        ></div>
-      </div>
-
-      <div
-        className="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4"
-      >
-        <div
-          className="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4"
-        >
-          <div
-            className="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow"
-          >
-            <div className="p-8 text-3xl font-bold text-center border-b-4">
-              Free
-            </div>
-            <ul className="w-full text-center text-sm">
-              <li className="border-b py-4">Thing</li>
-              <li className="border-b py-4">Thing</li>
-              <li className="border-b py-4">Thing</li>
-            </ul>
-          </div>
-          <div
-            className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
-          >
-            <div
-              className="w-full pt-6 text-3xl text-gray-600 font-bold text-center"
-            >
-              £0 <span className="text-base">for one user</span>
-            </div>
-            <div className="flex items-center justify-center">
-              <button
-                className="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg"
-              >
-                Sign Up
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div
-          className="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 gradient shadow hover:shadow-lg z-10"
-        >
-          <div className="flex-1 rounded-t rounded-b-none overflow-hidden">
-            <div className="w-full p-8 text-3xl font-bold text-center">Basic</div>
-            <ul className="w-full text-center text-base font-bold">
-              <li className="py-4">Thing</li>
-              <li className="py-4">Thing</li>
-              <li className="py-4">Thing</li>
-              <li className="py-4">Thing</li>
-            </ul>
-          </div>
-          <div
-            className="flex-none mt-auto rounded-b rounded-t-none overflow-hidden p-6"
-          >
-            <div className="w-full pt-6 text-4xl font-bold text-center">
-              £x.99 <span className="text-base">/ per user</span>
-            </div>
-            <div className="flex items-center justify-center">
-              <button
-                className="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg"
-              >
-                Sign Up
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div
-          className="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4"
-        >
-          <div
-            className="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow"
-          >
-            <div className="p-8 text-3xl font-bold text-center border-b-4">
-              Pro
-            </div>
-            <ul className="w-full text-center text-sm">
-              <li className="border-b py-4">Thing</li>
-              <li className="border-b py-4">Thing</li>
-              <li className="border-b py-4">Thing</li>
-            </ul>
-          </div>
-          <div
-            className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
-          >
-            <div
-              className="w-full pt-6 text-3xl text-gray-600 font-bold text-center"
-            >
-              £x.99 <span className="text-base">/ per user</span>
-            </div>
-            <div className="flex items-center justify-center">
-              <button
-                className="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg"
-              >
-                Sign Up
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <section className="gradient w-full mx-auto text-center pt-6 pb-12">
     <h2
@@ -912,7 +633,7 @@ return (
             >
               <path d="M13 8V0L8.11 5.87 3 12h4v8L17 8h-4z" />
             </svg>
-            Bolt App
+            ospo
           </a>
         </div>
 
