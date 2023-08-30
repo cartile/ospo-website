@@ -33,7 +33,7 @@ export default function InfoGraphicGuide() {
             <div className="w-full sm:w-1/2 p-3 mt-6 flex flex-col justify-center">
                 <div className="align-middle">
                     <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
-                    Monitor Dashboard
+                    View Analytics:
                     </h3>
                     <p className="text-gray-600 mb-8">
                         Gain insights into your job-hunting journey. Discover patterns, improve strategies, and boost your chances!

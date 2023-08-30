@@ -42,29 +42,35 @@ export default function NavBar() {
         <ul className="list-reset lg:flex justify-end flex-1 items-center">
           <li className="mr-3">
             <a
-              className="inline-block py-2 px-4 text-black font-bold no-underline"
+              className="text-lg inline-block py-2 px-4 text-black font-bold no-underline"
               href="#"
-              >Active</a>
+              >Home</a>
           </li>
           <li className="mr-3">
             <a
-              className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+              className="text-lg inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
               href="#"
-              >link</a>
+              >Features</a>
           </li>
           <li className="mr-3">
             <a
-              className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+              className="text-lg inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
               href="#"
-              >link</a>
+              >FAQ</a>
+          </li>
+          <li className="mr-3">
+            <a
+              className="text-lg inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+              href="/register"
+              >Sign Up</a>
+          </li>
+          <li className="mr-3">
+            <a
+              className="text-lg inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+              href="/login"
+              >Sign In</a>
           </li>
         </ul>
-        <button
-          id="navAction"
-          className="mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 shadow opacity-75"
-        >
-          Action
-        </button>
       </div>
     </div>
   </nav>
