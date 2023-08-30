@@ -1,4 +1,4 @@
-import Navbar from './components/HomePage/Navbar'
+import Navbar from './components/HomePage/NavBar'
 import Headline from './components/HomePage/Headline'
 
 export default function Home() {
