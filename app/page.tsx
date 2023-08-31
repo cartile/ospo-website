@@ -4,6 +4,7 @@ import MockBrowser from './components/HomePage/MockBrowser'
 import InfoGraphicGuide from './components/HomePage/InfoGraphicGuide'
 import CallToAction from './components/HomePage/CallToAction'
 import Footer from './components/HomePage/Footer'
+import '@ionic/core/css/core.css';
 
 export default function Home() {
 return (
