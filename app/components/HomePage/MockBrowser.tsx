@@ -1,5 +1,6 @@
 import { IoInformationCircleOutline } from "react-icons/io5"
 import RecentApplication from '../Dashboard/RecentApplication'
+import DropDown from '../Dashboard/DropDown'
 import AmazonPng from '../../assets/images/Amazon_icon.png'
 import MicrosoftPng from '../../assets/images/Microsoft_icon.png'
 import TeslaPng from '../../assets/images/Tesla_icon.png'
@@ -15,7 +16,11 @@ export default function MockBrowser() {
                 </div>
                 <p className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-7"> My Demo Account </p>
                     <div className="flex flex-1 flex-col bg-white w-6/12 box-border rounded-lg p-5 m-3 mr-0">
-                        <p className="p-5 text-4xl font-bold">Your Year/Month/Week in Review </p>
+                        <div className="flex flex-row items-center justify-between">
+                            <p className="flex gap-5 p-2 text-3xl font-bold">Your Year in Review </p>
+                            <DropDown />
+                        </div>
+                        
                         <div className="flex items-center">
                             <p className="ml-5 text-3xl">400</p>
                             <p className="p-2">Jobs Applied</p>
@@ -37,12 +42,12 @@ export default function MockBrowser() {
                         <div className="bg-white box-border rounded-lg p-5 m-3">
                             something
                         </div>
-                        <div className="bg-white box-border rounded-lg m-3">
-                            <p className="pt-5 pl-5 text-2xl font-bold">Your Recent Applications</p>
+                        <div className="bg-white box-border rounded-lg m-3 p-3">
+                            <p className="text-2xl font-bold translate-x-2 mb-2">Your Recent Applications</p>
                             <ul className="max-w-md">
-                                <RecentApplication img={AmazonPng} alt={"Amazon Logo"} company={"Amazon"} role={"Software Engineer Intern"} timeSince={"5 min ago"} />
-                                <RecentApplication img={MicrosoftPng} alt={"Microsoft Logo"} company={"Microsoft"} role={"Software Engineer Intern"} timeSince={"27 min ago"} />
-                                <RecentApplication img={TeslaPng} alt={"Tesla Logo"} company={"Tesla"} role={"Data Analyst Intern"} timeSince={"2 days ago"} />
+                                <RecentApplication img={AmazonPng.src} alt={"Amazon Logo"} company={"Amazon"} role={"Software Engineer Intern"} timeSince={"5 min ago"} />
+                                <RecentApplication img={MicrosoftPng.src} alt={"Microsoft Logo"} company={"Microsoft"} role={"Software Engineer Intern"} timeSince={"27 min ago"} />
+                                <RecentApplication img={TeslaPng.src} alt={"Tesla Logo"} company={"Tesla"} role={"Data Analyst Intern"} timeSince={"2 days ago"} />
                             </ul>
                         </div>
                     </div>

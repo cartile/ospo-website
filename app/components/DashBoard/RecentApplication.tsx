@@ -29,7 +29,7 @@ export default function RecentApplication(props: Props) {
                         {role}
                     </p>
                 </div>
-                <div className="inline-flex items-center text-base font-semibold text-gray-900">
+                <div className="pr-3 inline-flex items-center text-base font-semibold text-gray-900">
                     {timeSince}
                 </div>
             </div>
