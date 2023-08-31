@@ -11,18 +11,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 export default function MockBrowser() {
     const [timePeriod, setTimePeriod] = useState("Last 365 days")
     const [isLoaded, setIsLoaded] = useState(false)
-    const [animateChange, setAnimateChange] = useState(false)
 
     useEffect(() => {
         setIsLoaded(true)
     }, [])
-    
-    useEffect(() => {
-        if (isLoaded) {
-            setAnimateChange(true)
-        }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [timePeriod])
 
     const handleTimeFrame = () => {
         if (timePeriod === "Last 365 days") {
@@ -48,18 +40,18 @@ export default function MockBrowser() {
                         <div className="flex flex-row items-center justify-between">
                             <p className="flex p-2 text-3xl font-bold">
                             Your Past&nbsp;
-                                {isLoaded && (
-                                    <AnimatePresence mode="wait">
+                                {isLoaded ? (
+                                    <AnimatePresence initial={false} mode="wait">
                                         <motion.p
-                                            key={animateChange ? timePeriod : ''} 
-                                            initial={animateChange ? { opacity: 0 } : { opacity: 1 }} 
+                                            key={timePeriod} 
+                                            initial={{ opacity: 0 }} 
                                             animate={{ opacity: 1 }} 
                                             exit={{ opacity: 0 }} 
                                             transition={{ duration: 0.3 }}>
                                             {handleTimeFrame()}
                                         </motion.p>
                                     </AnimatePresence>
-                                )}
+                                ) : handleTimeFrame()}
                             &nbsp;in Review </p>
                             <DropDown timePeriod={timePeriod} setTimePeriod={setTimePeriod} />
                         </div>
