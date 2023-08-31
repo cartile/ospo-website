@@ -48,3 +48,12 @@ button,
 .browser-mockup > * {
   display: block;
 }
+
+#sortbox:checked + label + #sortboxmenu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.selectedTimePeriod {
+  color:#f44
+}
