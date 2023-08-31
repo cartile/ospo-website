@@ -1,8 +1,11 @@
 'use client'
 import { useState, useRef, useEffect } from 'react'
 
-export default function DropDown() {
-    const [timePeriod, setTimePeriod] = useState("Last 365 days")
+type Props = {
+    timePeriod : string,
+    setTimePeriod : (period: string) => void
+}
+export default function DropDown({timePeriod, setTimePeriod} : Props) {
     const [isOpen, setIsOpen] = useState(false)
     
     const dropdownRef = useRef<HTMLDivElement | null>(null)

@@ -1,11 +1,40 @@
+'use client'
 import { IoInformationCircleOutline } from "react-icons/io5"
+import { useState, useEffect } from 'react'
 import RecentApplication from '../Dashboard/RecentApplication'
 import DropDown from '../Dashboard/DropDown'
 import AmazonPng from '../../assets/images/Amazon_icon.png'
 import MicrosoftPng from '../../assets/images/Microsoft_icon.png'
 import TeslaPng from '../../assets/images/Tesla_icon.png'
+import { motion, AnimatePresence } from 'framer-motion'
 
 export default function MockBrowser() {
+    const [timePeriod, setTimePeriod] = useState("Last 365 days")
+    const [isLoaded, setIsLoaded] = useState(false)
+    const [animateChange, setAnimateChange] = useState(false)
+
+    useEffect(() => {
+        setIsLoaded(true)
+    }, [])
+    
+    useEffect(() => {
+        if (isLoaded) {
+            setAnimateChange(true)
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [timePeriod])
+
+    const handleTimeFrame = () => {
+        if (timePeriod === "Last 365 days") {
+            return 'Year'
+        } else if (timePeriod === "Last 30 days") { 
+            return 'Month'
+        } else if (timePeriod === "Last 7 days") { 
+            return 'Week'
+        }
+        return 'null'
+    }
+
     return (
         <div className="flex items-center w-full mx-auto content-end">
             <div
@@ -17,8 +46,22 @@ export default function MockBrowser() {
                 <p className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-7"> My Demo Account </p>
                     <div className="flex flex-1 flex-col bg-white w-6/12 box-border rounded-lg p-5 m-3 mr-0">
                         <div className="flex flex-row items-center justify-between">
-                            <p className="flex gap-5 p-2 text-3xl font-bold">Your Year in Review </p>
-                            <DropDown />
+                            <p className="flex p-2 text-3xl font-bold">
+                            Your Past&nbsp;
+                                {isLoaded && (
+                                    <AnimatePresence mode="wait">
+                                        <motion.p
+                                            key={animateChange ? timePeriod : ''} 
+                                            initial={animateChange ? { opacity: 0 } : { opacity: 1 }} 
+                                            animate={{ opacity: 1 }} 
+                                            exit={{ opacity: 0 }} 
+                                            transition={{ duration: 0.3 }}>
+                                            {handleTimeFrame()}
+                                        </motion.p>
+                                    </AnimatePresence>
+                                )}
+                            &nbsp;in Review </p>
+                            <DropDown timePeriod={timePeriod} setTimePeriod={setTimePeriod} />
                         </div>
                         
                         <div className="flex items-center">
