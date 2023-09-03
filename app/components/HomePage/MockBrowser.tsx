@@ -12,16 +12,26 @@ export default function MockBrowser() {
     const [timePeriod, setTimePeriod] = useState("Last 365 days")
     const [isLoaded, setIsLoaded] = useState(false)
 
+    let jobsApplied: (number)[] = [400, 50, 15]
+    let rejections: (number)[] = [300, 10, 2]
+    let ghosted: (number)[] = [75, 5, 1]
+    let interviews: (number)[] = [20, 3, 1]
+    let offers: (number)[] = [5, 2, 1]
+    let currIndex: number = 0
+
     useEffect(() => {
         setIsLoaded(true)
     }, [])
 
     const handleTimeFrame = () => {
         if (timePeriod === "Last 365 days") {
+            currIndex = 0
             return 'Year'
         } else if (timePeriod === "Last 30 days") { 
+            currIndex = 1
             return 'Month'
         } else if (timePeriod === "Last 7 days") { 
+            currIndex = 2
             return 'Week'
         }
         return 'null'
@@ -57,19 +67,23 @@ export default function MockBrowser() {
                         </div>
                         
                         <div className="flex items-center">
-                            <p className="ml-5 text-3xl">400</p>
+                            <p className="ml-5 text-3xl">{jobsApplied[currIndex]}</p>
                             <p className="p-2">Jobs Applied</p>
                         </div>
                         <div className="flex items-center">
-                            <p className="ml-5 text-3xl">380</p>
+                            <p className="ml-5 text-3xl">{rejections[currIndex]}</p>
                             <p className="p-2">Rejections</p>
                         </div>
                         <div className="flex items-center">
-                            <p className="ml-5 text-3xl">20</p>
+                            <p className="ml-5 text-3xl">{ghosted[currIndex]}</p>
+                            <p className="p-2">No response</p>
+                        </div>
+                        <div className="flex items-center">
+                            <p className="ml-5 text-3xl">{interviews[currIndex]}</p>
                             <p className="p-2">Interview Requests</p>
                         </div>
                         <div className="flex items-center">
-                            <p className="ml-5 text-3xl">5</p>
+                            <p className="ml-5 text-3xl">{offers[currIndex]}</p>
                             <p className="p-2">Job Offers</p>
                         </div>
                     </div>
