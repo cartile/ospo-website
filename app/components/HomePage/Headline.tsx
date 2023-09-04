@@ -15,7 +15,7 @@ export default function Headline() {
     <button
       className="mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48"
     >
-      Sign Up
+      Sign Up For Free
     </button>
     <a
       href="#"

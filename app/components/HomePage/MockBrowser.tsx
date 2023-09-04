@@ -3,6 +3,7 @@ import { IoInformationCircleOutline } from "react-icons/io5"
 import { useState, useEffect } from 'react'
 import RecentApplication from '../Dashboard/RecentApplication'
 import DropDown from '../Dashboard/DropDown'
+import DemoGraph from '../Dashboard/DemoGraph'
 import AmazonPng from '../../assets/images/Amazon_icon.png'
 import MicrosoftPng from '../../assets/images/Microsoft_icon.png'
 import TeslaPng from '../../assets/images/Tesla_icon.png'
@@ -65,26 +66,32 @@ export default function MockBrowser() {
                             &nbsp;in Review </p>
                             <DropDown timePeriod={timePeriod} setTimePeriod={setTimePeriod} />
                         </div>
-                        
-                        <div className="flex items-center">
-                            <p className="ml-5 text-3xl">{jobsApplied[currIndex]}</p>
-                            <p className="p-2">Jobs Applied</p>
+                        <div className="flex flex-1">
+                            <div>
+                                <div className="flex items-center">
+                                    <p className="ml-5 text-3xl">{jobsApplied[currIndex]}</p>
+                                    <p className="p-2">Jobs Applied</p>
+                                </div>
+                                <div className="flex items-center">
+                                    <p className="ml-5 text-3xl">{rejections[currIndex]}</p>
+                                    <p className="p-2">Rejections</p>
+                                </div>
+                                <div className="flex items-center">
+                                    <p className="ml-5 text-3xl">{ghosted[currIndex]}</p>
+                                    <p className="p-2">No response</p>
+                                </div>
+                                <div className="flex items-center">
+                                    <p className="ml-5 text-3xl">{interviews[currIndex]}</p>
+                                    <p className="p-2">Interview Requests</p>
+                                </div>
+                                <div className="flex items-center">
+                                    <p className="ml-5 text-3xl">{offers[currIndex]}</p>
+                                    <p className="p-2">Job Offers</p>
+                                </div>
+                            </div>
+                        <div id="graphDiv flex flex-1">
+                            <DemoGraph />
                         </div>
-                        <div className="flex items-center">
-                            <p className="ml-5 text-3xl">{rejections[currIndex]}</p>
-                            <p className="p-2">Rejections</p>
-                        </div>
-                        <div className="flex items-center">
-                            <p className="ml-5 text-3xl">{ghosted[currIndex]}</p>
-                            <p className="p-2">No response</p>
-                        </div>
-                        <div className="flex items-center">
-                            <p className="ml-5 text-3xl">{interviews[currIndex]}</p>
-                            <p className="p-2">Interview Requests</p>
-                        </div>
-                        <div className="flex items-center">
-                            <p className="ml-5 text-3xl">{offers[currIndex]}</p>
-                            <p className="p-2">Job Offers</p>
                         </div>
                     </div>
                     <div className="flex flex-1 flex-col">

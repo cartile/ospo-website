@@ -21,7 +21,7 @@ export default function InfoGraphicGuide() {
                 <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
                     Apply for a job on any platform.
                 </h3>
-            <p className="text-gray-600 mb-8">Track your job applications manually with our website or automatically with our <a href="#" className="text-orange-500 underline hover:text-orange-700 transition-colors duration-300 ease-in-out">Chrome Extension</a>. 
+            <p className="text-gray-600 mb-8">Track your job applications manually with our website or automatically with our <a target="_blank" rel="noreferrer noopener" href="https://github.com/cartile/ospo-chrome-extension" className="text-orange-500 underline hover:text-orange-700 transition-colors duration-300 ease-in-out">Chrome Extension</a>. 
                 <br /><br />
             </p>
             </div>
