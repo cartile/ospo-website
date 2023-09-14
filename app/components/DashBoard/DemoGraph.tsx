@@ -20,20 +20,9 @@ ChartJS.register(
     Legend
   );
   
-  const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   
-  export const data = {
-    labels,
-    datasets: [
-      {
-        label: 'Jobs Applied',
-        data: labels.map(() => faker.number.int({ min: 0, max: 40 })),
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
-      },
-    ],
-  };
 
-export default function DemoGraph({timePeriod}) {
+export default function DemoGraph({timePeriod} : {timePeriod:string}) {
     const options = {
       responsive: true,
       scales: {
@@ -55,6 +44,22 @@ export default function DemoGraph({timePeriod}) {
         maintainAspectRatio: false,
         aspectRatio: 1
       },
+    };
+
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const currentDate = new Date();
+    const currentMonth = currentDate.getMonth()
+    const labels = months.slice(currentMonth + 1).concat(months.slice(0, currentMonth + 1));
+
+    const data = {
+      labels,
+      datasets: [
+        {
+          label: 'Jobs Applied',
+          data: labels.map(() => faker.number.int({ min: 0, max: 40 })),
+          backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        },
+      ],
     };
     return (
         <Bar style={{ width: "450px" }} options={options} data={data} />
