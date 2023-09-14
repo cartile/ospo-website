@@ -90,7 +90,7 @@ export default function MockBrowser() {
                                 </div>
                             </div>
                             <div id="graphDiv flex-grow">
-                                <DemoGraph />
+                                <DemoGraph timePeriod={timePeriod}/>
                             </div>
                         </div>
                     </div>

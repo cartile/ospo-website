@@ -20,29 +20,6 @@ ChartJS.register(
     Legend
   );
   
-  export const options = {
-    responsive: true,
-    scales: {
-      x: {
-        grid: {
-          display: false,
-        },
-      },
-  
-    },
-    plugins: {
-      legend: {
-        display: false
-      },
-      title: {
-        display: true,
-        text: 'Applications in last 365 days',
-      },
-      maintainAspectRatio: false,
-      aspectRatio: 1
-    },
-  };
-  
   const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   
   export const data = {
@@ -56,7 +33,29 @@ ChartJS.register(
     ],
   };
 
-export default function DemoGraph() {
+export default function DemoGraph({timePeriod}) {
+    const options = {
+      responsive: true,
+      scales: {
+        x: {
+          grid: {
+            display: false,
+          },
+        },
+    
+      },
+      plugins: {
+        legend: {
+          display: false
+        },
+        title: {
+          display: true,
+          text: `Applications in ${timePeriod.toLowerCase()}`,
+        },
+        maintainAspectRatio: false,
+        aspectRatio: 1
+      },
+    };
     return (
         <Bar style={{ width: "450px" }} options={options} data={data} />
     )
