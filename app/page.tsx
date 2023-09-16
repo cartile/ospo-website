@@ -9,9 +9,9 @@ import '@ionic/core/css/core.css';
 export default function Home() {
 return (
   <>
-    <main className="gradient leading-relaxed tracking-wide flex flex-col">
+    <main className="gradient leading-relaxed tracking-wide ">
       <Navbar />
-      <div className="container mx-auto h-screen">
+      <div className="container items-end h-screen mx-auto">
         <Headline />
         <MockBrowser />
       </div>
