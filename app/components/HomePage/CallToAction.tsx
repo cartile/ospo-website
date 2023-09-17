@@ -13,7 +13,7 @@ export default function CallToAction() {
         </div>
     
         <h3 className="my-4 text-3xl font-extrabold">
-          Revolutionize Your Job Application Process with Us.
+          Start tracking your jobs for real, with us.
         </h3>
     
         <button
