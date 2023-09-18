@@ -9,7 +9,6 @@ Tooltip,
 Legend,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
-import { faker } from '@faker-js/faker';
 
 ChartJS.register(
     CategoryScale,
@@ -19,10 +18,8 @@ ChartJS.register(
     Tooltip,
     Legend
   );
-  
-  
 
-export default function DemoGraph({timePeriod} : {timePeriod:string}) {
+export default function DemoGraph({timePeriod} : {timePeriod : string}) {
     const options = {
       responsive: true,
       scales: {
@@ -52,13 +49,13 @@ export default function DemoGraph({timePeriod} : {timePeriod:string}) {
     const currentMonth = currentDate.getMonth()
    
     const yearlyLabels = months.slice(currentMonth + 1).concat(months.slice(0, currentMonth + 1));
-    const yearlyData = [26, 53, 2, 11, 14, 58, 44, 32, 11, 70, 22, 57]
+    const yearlyData = ["26", "53", "2", "11", "14", "58", "44", "32", "11", "70", "22", "57"]
 
     const monthlyLabels = ['3 Weeks Ago', '2 Weeks Ago', '1 Week Ago', 'Current Week']
-    const monthlyData = [15, 13, 4, 18]
+    const monthlyData = ["15", "13", "4", "18"]
 
     const weeklyLabels = weeks.slice(0, currentDay).concat(weeks.slice(currentDay))
-    const weeklyData = [4, 2, 2, 1, 2, 1, 3]
+    const weeklyData = ["4", "2", "2", "1", "2", "1", "3"]
 
     const usedInfo = () =>{
       if (timePeriod==="Last 7 days") {
