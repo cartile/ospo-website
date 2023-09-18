@@ -12,7 +12,7 @@ export default function RecentApplication(props: Props) {
     const { img, alt, company, role, timeSince } = props
     return (
         <li className="ml-2 pl-3 pb-3 sm:pb-4 bg-gray-100 mb-2 rounded-lg p-2">
-            <div className="flex items-center space-x-4">
+            <div className="flex flex-1 items-center space-x-4">
             <div className="flex-shrink-0">
             <Image
                 src={img}

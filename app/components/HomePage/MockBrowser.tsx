@@ -1,9 +1,10 @@
 'use client'
 import { IoInformationCircleOutline } from "react-icons/io5"
 import { useState, useEffect } from 'react'
-import RecentApplication from '../Dashboard/RecentApplication'
-import DropDown from '../Dashboard/DropDown'
-import DemoGraph from '../Dashboard/DemoGraph'
+import RecentApplication from '../DemoDashboard/DemoRecentApplication'
+import DropDown from '../DemoDashboard/DropDown'
+import DemoGraph from '../DemoDashboard/DemoGraph'
+import DemoInsights from '../DemoDashboard/DemoInsights'
 import AmazonPng from '../../assets/images/Amazon_icon.png'
 import MicrosoftPng from '../../assets/images/Microsoft_icon.png'
 import TeslaPng from '../../assets/images/Tesla_icon.png'
@@ -89,16 +90,30 @@ export default function MockBrowser() {
                                     <p className="p-2">Job Offers</p>
                                 </div>
                             </div>
-                            <div id="graphDiv flex-grow">
+                            <div id="graphDiv" className="flex flex-grow">
                                 <DemoGraph timePeriod={timePeriod}/>
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-1 flex-col">
-                        <div className="bg-white box-border rounded-lg p-5 m-3 flex flex-1 flex-col">
-                            <p className="text-2xl font-bold mb-2 -translate-y-1">Quick Insights</p>
+                    <div className="flex flex-auto flex-col overflow-hidden">
+                        <div className="bg-white box-border rounded-lg p-5 m-3 flex flex-wrap flex-col">
+                            <p className="flex text-2xl font-bold mb-2 -translate-y-1">
+                                Quick Insights:&nbsp;{isLoaded ? (
+                                    <AnimatePresence initial={false} mode="wait">
+                                        <motion.p
+                                            key={timePeriod} 
+                                            initial={{ opacity: 0 }} 
+                                            animate={{ opacity: 1 }} 
+                                            exit={{ opacity: 0 }} 
+                                            transition={{ duration: 0.3 }}>
+                                            {handleTimeFrame() + "ly"}
+                                        </motion.p>
+                                    </AnimatePresence>
+                                ) : handleTimeFrame()}
+                            </p>
+                            <DemoInsights />
                         </div>
-                        <div className="bg-white box-border rounded-lg m-3 p-3 flex flex-1 flex-col">
+                        <div className="flex flex-1 flex-col w-auto bg-white box-border rounded-lg m-3 p-3">
                             <p className="text-2xl font-bold translate-x-2 mb-2">Your Recent Applications</p>
                             <ul>
                                 <RecentApplication img={AmazonPng.src} alt={"Amazon Logo"} company={"Amazon"} role={"Software Engineer Intern"} timeSince={"5 min ago"} />

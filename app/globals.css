@@ -31,6 +31,7 @@ button,
   position: relative;
   height: 60vh;
   background-color: #cbbacc;
+  display: flex;
 }
 
 .browser-mockup:before {
