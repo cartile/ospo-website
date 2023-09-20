@@ -70,23 +70,23 @@ export default function MockBrowser() {
                         <div className="flex flex-initial">
                             <div className="w-[230px]">
                                 <div className="flex flex-initial items-center">
-                                    <p className="ml-5 text-3xl">{jobsApplied[currIndex]}</p>
+                                    <p className="ml-5 text-3xl font-semibold">{jobsApplied[currIndex]}</p>
                                     <p className="p-2">Jobs Applied</p>
                                 </div>
                                 <div className="flex flex-initial items-center">
-                                    <p className="ml-5 text-3xl">{rejections[currIndex]}</p>
+                                    <p className="ml-5 text-3xl font-semibold">{rejections[currIndex]}</p>
                                     <p className="p-2">Rejections</p>
                                 </div>
                                 <div className="flex flex-initial items-center">
-                                    <p className="ml-5 text-3xl">{ghosted[currIndex]}</p>
+                                    <p className="ml-5 text-3xl font-semibold">{ghosted[currIndex]}</p>
                                     <p className="p-2">No response</p>
                                 </div>
                                 <div className="flex flex-initial items-center">
-                                    <p className="ml-5 text-3xl">{interviews[currIndex]}</p>
+                                    <p className="ml-5 text-3xl font-semibold">{interviews[currIndex]}</p>
                                     <p className="p-2">Interview Requests</p>
                                 </div>
                                 <div className="flex flex-initial items-center">
-                                    <p className="ml-5 text-3xl">{offers[currIndex]}</p>
+                                    <p className="ml-5 text-3xl font-semibold">{offers[currIndex]}</p>
                                     <p className="p-2">Job Offers</p>
                                 </div>
                             </div>
